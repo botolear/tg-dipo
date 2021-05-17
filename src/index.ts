@@ -4,6 +4,7 @@ import { DefaultEvents } from './events';
 
 export * from './context';
 export * from './handler';
+export * from './events';
 
 export class DipoTG<
     E extends { [key: string]: ContextTG },
