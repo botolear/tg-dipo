@@ -3,10 +3,11 @@ import { ContextTG } from './context';
 import { DefaultEvents } from './events';
 
 export * from './context';
-export * from './handler';
 export * from './events';
+export * from './handler';
+export * from './markup/markup';
 
 export class DipoTG<
-    E extends { [key: string]: ContextTG },
-    D extends ContextTG,
+    E extends ExtractContexts<typeof DefaultEvents> = ExtractContexts<typeof DefaultEvents>,
+    D extends ContextTG = ContextTG,
 > extends Dipo<E, D> {}
